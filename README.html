@@ -41,6 +41,58 @@
     </head>
     <body class="vscode-body vscode-light">
         <h2 id="mern-auth-project">MERN Auth Project</h2>
+<p>We use Vite to install frontend</p>
+<pre><code class="language-javascript">npm create vite@latest frontend
+</code></pre>
+<p>After, go to frontend directory and</p>
+<pre><code class="language-javascript">npm i
+</code></pre>
+<p>Add config in vite.config.js file (we don't need that using create-react-app)</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title function_">defineConfig</span>({
+  <span class="hljs-attr">plugins</span>: [<span class="hljs-title function_">react</span>()],
+  <span class="hljs-comment">// Added</span>
+  <span class="hljs-attr">server</span>: {
+    <span class="hljs-attr">port</span>: <span class="hljs-number">3000</span>,
+    <span class="hljs-attr">proxy</span>: {
+      <span class="hljs-string">&#x27;/api&#x27;</span>: {
+        <span class="hljs-attr">target</span>: <span class="hljs-string">&#x27;http://localhost:5000&#x27;</span>,
+        <span class="hljs-attr">changeOrigin</span>: <span class="hljs-literal">true</span>,
+      },
+    },
+  },
+});
+</code></pre>
+<p>In package.json, add</p>
+<pre><code class="language-javascript"><span class="hljs-string">&quot;client&quot;</span>: <span class="hljs-string">&quot;npm run dev --prefix frontend&quot;</span>
+</code></pre>
+<p>To run both frontend and backend (in the root directory)</p>
+<pre><code class="language-javascript">npm i -D concurrently
+</code></pre>
+<p>Create another script</p>
+<pre><code class="language-javascript"><span class="hljs-string">&quot;dev&quot;</span>: <span class="hljs-string">&quot;concurrently \&quot;npm run server\&quot; \&quot;npm run client\&quot;&quot;</span>
+</code></pre>
+<p>Clean frontend folder</p>
+<ol>
+<li>Remove App.css</li>
+<li>Update App.jsx</li>
+<li>Change title in index.html</li>
+<li>Clear index.css</li>
+</ol>
+<p>Install Bootstrapp and icons in frontend folder</p>
+<pre><code class="language-javascript">npm i bootstrap react-bootstrap react-icons
+</code></pre>
+<p>Create components folder &amp; screens folder in src folder</p>
+<ul>
+<li>Create Header component - Header.jsx</li>
+<li>Create Home screen - HomeScreen.jsx</li>
+<li>Create Hero component - Hero.jsx</li>
+</ul>
+<p>Install react router &amp; react-router bootstrap in frontend folder</p>
+<pre><code class="language-javascript">npm i react-router-dom react-router-bootstrap
+</code></pre>
+<ul>
+<li>Create Form Container - FormContainer.jsx</li>
+</ul>
 
         
         

@@ -73,5 +73,16 @@ Install react router & react-router bootstrap in frontend folder
 npm i react-router-dom react-router-bootstrap
 ```
 
+> main.jsx has been updated for adding routes
+
 - Create Form Container - FormContainer.jsx
 - Create Login screen - LoginScreen.jsx
+- Create Register screen - RegisterScreen.jsx
+
+Install Redux in frontend folder
+
+```javascript
+npm i @reduxjs/toolkit react-redux
+```
+
+Create in frontend/src folder a store.js file, and import it in main.jsx

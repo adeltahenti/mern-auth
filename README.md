@@ -86,3 +86,5 @@ npm i @reduxjs/toolkit react-redux
 ```
 
 Create in frontend/src folder a store.js file, and import it in main.jsx
+
+Create slices folder in frontend/src folder
